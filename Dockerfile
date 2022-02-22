@@ -16,4 +16,4 @@ COPY . /app
 # configure the container to run in an executed manner
 ENTRYPOINT [ "python" ]
 
-CMD ["view.py" ]
+CMD ["uvicorn", "app.view:app", "--host", "0.0.0.0", "--port", "7000"]
